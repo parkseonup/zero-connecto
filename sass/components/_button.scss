@@ -1,0 +1,22 @@
+@use '../config' as *;
+
+.toggleDarkMode {
+  cursor: pointer;
+  border: 0;
+  padding: 8px;
+  background: none;
+  color: $primary;
+
+  &--fixed {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+  }
+
+  svg {
+    pointer-events: none;
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+}

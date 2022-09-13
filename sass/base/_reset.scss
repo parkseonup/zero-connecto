@@ -1,0 +1,43 @@
+@use '../components' as *;
+
+.reset {
+  &--box-model {
+    padding: 0;
+    margin: 0;
+    bottom: 0;
+  }
+
+  &--button {
+    cursor: pointer;
+
+    svg {
+      pointer-events: none;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  &--list {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+
+  &--abbr {
+    cursor: help;
+    text-decoration: none;
+  }
+
+  &--table {
+    border: {
+      collapse: collapse;
+      spacing: 0;
+    }
+
+    caption {
+      @extend a11yHidden !optional;
+    }
+  }
+}

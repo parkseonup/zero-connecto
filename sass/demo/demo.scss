@@ -1,0 +1,31 @@
+/* placeholder + extend */
+%error-base {
+  color: red;
+  background-color: black;
+  cursor: progress;
+}
+
+.eroor {
+  @extend %error-base;
+
+  &--seriously {
+    @extend %error-base;
+    font-weight: bold;
+  }
+}
+
+/* Mixin */
+// 정의, 확장, 호출, 키워드 인자
+@mixin flexVerticalCenter($type: flex, $x: flex-start, $y: center) {
+  display: $type;
+  justify-content: $x;
+  align-items: $y;
+}
+
+.demo {
+  @include flexVerticalCenter;
+
+  &__content {
+    @include flexVerticalCenter(inline-flex, $y: stretch);
+  }
+}

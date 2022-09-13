@@ -1,0 +1,26 @@
+
+
+/* placeholder + extend */
+.eroor--seriously, .eroor {
+  color: red;
+  background-color: black;
+  cursor: progress;
+}
+
+.eroor--seriously {
+  font-weight: bold;
+}
+
+/* Mixin */
+.demo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.demo__content {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+/*# sourceMappingURL=demo.css.map */

@@ -1,0 +1,13 @@
+@use '../config';
+
+.a11yHidden {
+  @include config.a11yHidden;
+}
+
+.skipToContent[href^='#'] {
+  @include config.a11yHidden;
+
+  &.focusable:focus {
+    @include config.a11yHidden(true);
+  }
+}
