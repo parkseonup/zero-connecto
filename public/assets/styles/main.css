@@ -6,13 +6,85 @@ body *, body ::before, body::before, body ::after, body::after {
 }
 
 :root {
-  font-size: 62.5%;
+  font-size: 100%;
 }
 
 body {
-  font: 1.6rem/1.5 "Open Sans", Dotum, Arial, Verdana, sans-serif;
-  background: #ffffff;
-  color: #000000;
+  font: 1rem/1.5 "Open Sans", Dotum, Arial, Verdana, sans-serif;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.blue-100 {
+  color: #deecef;
+}
+
+.blue-200 {
+  color: #bed9df;
+}
+
+.blue-300 {
+  color: #9dc6cf;
+}
+
+.blue-400 {
+  color: #7db3bf;
+}
+
+.blue-500 {
+  color: #5ca0af;
+}
+
+.blue-600 {
+  color: #4a808c;
+}
+
+.blue-700 {
+  color: #376069;
+}
+
+.blue-800 {
+  color: #254046;
+}
+
+.blue-900 {
+  color: #122023;
+}
+
+.blue-100 {
+  color: #deecef;
+}
+
+.blue-200 {
+  color: #bed9df;
+}
+
+.blue-300 {
+  color: #9dc6cf;
+}
+
+.blue-400 {
+  color: #7db3bf;
+}
+
+.blue-500 {
+  color: #5ca0af;
+}
+
+.blue-600 {
+  color: #4a808c;
+}
+
+.blue-700 {
+  color: #376069;
+}
+
+.blue-800 {
+  color: #254046;
+}
+
+.blue-900 {
+  color: #122023;
 }
 
 /*# sourceMappingURL=main.css.map */
