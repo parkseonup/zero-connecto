@@ -1,0 +1,21 @@
+%reset-box-model {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+%reset-pseudo-element {
+  &::before,
+  &::after {
+    @extend %reset-box-model;
+  }
+}
+
+body {
+  @extend %reset-pseudo-element;
+  * {
+    @extend %reset-box-model;
+    @extend %reset-pseudo-element;
+  }
+}
