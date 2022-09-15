@@ -13,6 +13,7 @@
 }
 
 body {
+  @extend %reset-box-model;
   @extend %reset-pseudo-element;
   * {
     @extend %reset-box-model;
@@ -27,4 +28,8 @@ ul {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button {
+  cursor: pointer;
 }

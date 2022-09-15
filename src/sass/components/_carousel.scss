@@ -1,21 +1,70 @@
 @use '../abstracts' as *;
 
 .carousel {
+  position: relative;
+
   .a11yHidden {
     @include a11y;
   }
 
-  .button__arrow {
-    text-indent: -9999px;
-    white-space: nowrap;
-    overflow: hidden;
+  .button {
+    &__wrapper {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      z-index: 9;
+      display: flex;
+      justify-content: space-between;
+      margin-left: -25px;
+      margin-right: -25px;
+      transform: translateY(-50%);
+    }
+
+    &__arrow {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      text-indent: -9999px;
+      white-space: nowrap;
+      border-radius: 50%;
+      overflow: hidden;
+      transition: transform 0.3s;
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+      }
+
+      &.next {
+        transform: rotate(180deg);
+
+        &:hover {
+          transform: rotate(180deg) scale(1.2);
+        }
+      }
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
   }
 
   &__item {
     display: none;
+    font-size: 0;
 
     &.is--active {
       display: block;
+    }
+
+    img {
+      width: 50%;
+      max-width: 100%;
+      height: auto;
     }
   }
 }

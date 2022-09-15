@@ -7,5 +7,35 @@
 
   &__list {
     @include flex;
+    gap: 24px;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    width: 150px;
+    padding: 8px;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &.is--active:not(:hover)::after {
+      $nav-bar-height: 2px;
+
+      content: '';
+      position: absolute;
+      bottom: -#{$nav-bar-height};
+      left: 50%;
+      width: 52px;
+      height: $nav-bar-height;
+      background-color: $white-opacity;
+      transform: translateX(-50%);
+      pointer-events: none;
+    }
   }
 }

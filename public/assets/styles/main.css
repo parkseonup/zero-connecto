@@ -1,4 +1,4 @@
-body *, body ::before, body::before, body ::after, body::after {
+body *, body, body ::before, body::before, body ::after, body::after {
   padding: 0;
   margin: 0;
   border: 0;
@@ -14,6 +14,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 :root {
   font-size: 62.5%;
 }
@@ -22,6 +26,10 @@ body {
   font: 1.6rem/1.5 "Open Sans", Dotum, Arial, Verdana, sans-serif;
   color: #ffffff;
   background-color: #000000;
+}
+
+.container {
+  max-width: 1100px;
 }
 
 .navigation .a11yHidden {
@@ -40,8 +48,36 @@ body {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  gap: 24px;
+}
+.navigation__link {
+  position: relative;
+  display: block;
+  width: 150px;
+  padding: 8px;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: transform 0.3s;
+}
+.navigation__link:hover {
+  transform: scale(1.2);
+}
+.navigation__link.is--active:not(:hover)::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 52px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.6);
+  transform: translateX(-50%);
+  pointer-events: none;
 }
 
+.carousel {
+  position: relative;
+}
 .carousel .a11yHidden {
   position: absolute;
   z-index: -1;
@@ -53,27 +89,107 @@ body {
   clip: rect(1, 1, 1, 1);
   clip-path: inset(50%);
 }
+.carousel .button__wrapper {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  display: flex;
+  justify-content: space-between;
+  margin-left: -25px;
+  margin-right: -25px;
+  transform: translateY(-50%);
+}
 .carousel .button__arrow {
+  position: relative;
+  width: 50px;
+  height: 50px;
   text-indent: -9999px;
   white-space: nowrap;
+  border-radius: 50%;
   overflow: hidden;
+  transition: transform 0.3s;
+}
+.carousel .button__arrow img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.carousel .button__arrow.next {
+  transform: rotate(180deg);
+}
+.carousel .button__arrow.next:hover {
+  transform: rotate(180deg) scale(1.2);
+}
+.carousel .button__arrow:hover {
+  transform: scale(1.2);
 }
 .carousel__item {
   display: none;
+  font-size: 0;
 }
 .carousel__item.is--active {
   display: block;
 }
+.carousel__item img {
+  width: 50%;
+  max-width: 100%;
+  height: auto;
+}
+
+body:focus,
+body *:focus {
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.6);
+  outline: none;
+}
+
+#home {
+  background-color: #962d3b;
+}
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  padding: 28px 24px;
   display: flex;
-  flex-flow: row-reverse;
-  justify-content: flex-start;
+  flex-flow: row-reverse nowrap;
+  justify-content: space-between;
   align-items: center;
 }
 
+.feml a {
+  display: block;
+  padding: 8px;
+}
+.feml img {
+  vertical-align: bottom;
+}
+
 .navigation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   flex-grow: 1;
+  transform: translate(-50%, -50%);
+}
+
+.main {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.carousel {
+  width: 67%;
 }
 
 /*# sourceMappingURL=main.css.map */
