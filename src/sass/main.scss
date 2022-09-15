@@ -1,27 +1,2 @@
-@use 'abstracts' as * with (
-  $base-rem-size: 16
-);
 @use 'base';
-
-@use 'sass:meta';
-@use 'sass:map';
-
-// @each $keyValue in $red {
-//   @debug $keyValue;
-// }
-// @each $key, $value in $red {
-//   @debug $key;
-//   @debug $value;
-// }
-
-@mixin makeColorUtils($name, $prop: color) {
-  $color-values: map.get($colors, $name);
-  @each $key, $value in $color-values {
-    .#{'' + $name}-#{$key} {
-      #{$prop}: $value;
-    }
-  }
-}
-
-@include makeColorUtils(blue);
-@include makeColorUtils(blue);
+@use 'utilites';

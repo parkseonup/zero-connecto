@@ -1,0 +1,6 @@
+@use 'sass:map';
+
+@mixin colors($forground: null, $background: null) {
+  color: $forground;
+  background-color: $background;
+}

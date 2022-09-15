@@ -1,0 +1,33 @@
+@use 'sass:meta';
+
+@function is-type($data) {
+  @return meta.type-of($data);
+}
+
+@function is-null($data) {
+  @return meta.type-of($data) == 'null';
+}
+
+@function is-string($data) {
+  @return meta.type-of($data) == 'string';
+}
+
+@function is-color($data) {
+  @return meta.type-of($data) == 'color';
+}
+
+@function is-number($data) {
+  @return meta.type-of($data) == 'number';
+}
+
+@function is-bool($data) {
+  @return meta.type-of($data) == 'bool';
+}
+
+@function is-list($data) {
+  @return meta.type-of($data) == 'list';
+}
+
+@function is-map($data) {
+  @return meta.type-of($data) == 'map';
+}
