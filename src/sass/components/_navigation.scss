@@ -1,0 +1,11 @@
+@use '../abstracts' as *;
+
+.navigation {
+  .a11yHidden {
+    @include a11y;
+  }
+
+  &__list {
+    @include flex;
+  }
+}

@@ -1,0 +1,12 @@
+@use '../abstracts' as *;
+@use '../components' as *;
+
+.header {
+  @include flex($flow: row-reverse, $x: flex-start);
+}
+
+.navigation {
+  flex-grow: 1;
+}
+
+

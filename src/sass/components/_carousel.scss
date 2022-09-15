@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+.carousel {
+  .a11yHidden {
+    @include a11y;
+  }
+
+  .button__arrow {
+    text-indent: -9999px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__item {
+    display: none;
+
+    &.is--active {
+      display: block;
+    }
+  }
+}

@@ -24,6 +24,102 @@
       합니다.</noscript
     >
 
-    <div class="app"></div>
+    <header class="header">
+      <h1 class="feml">
+        <a href="/">
+          <img
+            src="./assets/images/svgs/logo.svg"
+            alt="Front-End Masters League"
+          />
+        </a>
+      </h1>
+
+      <nav class="navigation">
+        <h2 class="a11yHidden">메뉴 목록</h2>
+
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="/" class="navigation__link">Shop</a>
+          </li>
+          <li class="navigation__item">
+            <a href="/" class="navigation__link">Collection</a>
+          </li>
+          <li class="navigation__item">
+            <a href="/" class="navigation__link">About</a>
+          </li>
+        </ul>
+      </nav>
+
+      <img class="symbol" src="./assets/images/svgs/symbol.svg" alt="" />
+    </header>
+
+    <main class="main">
+      <section class="carousel">
+        <h2 class="a11yHidden">크로스 캐러셀 목록</h2>
+
+        <div class="button__wrapper">
+          <button type="button" class="button__arrow prev">
+            이전
+            <!-- 이전 콘텐츠 요악이 들어가야 함 -->
+            캐러셀 이미지 보기
+            <img
+              src="./assets/images/svgs/arrow.svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </button>
+          <button type="button" class="button__arrow next">
+            다음
+            <!-- 이전 콘텐츠 요악이 들어가야 함 -->
+            캐러셀 이미지 보기
+            <img
+              src="./assets/images/svgs/arrow.svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </button>
+        </div>
+
+        <ul class="carousel__list">
+          <li class="carousel__item is--active">
+            <img
+              src="./assets/images/resources/image-01.jpg"
+              alt="빨간 아디다스 트레이닝복을 입고 자석처럼 몸을 휘고있는 여자"
+            />
+            <img src="./assets/images/resources/image-02.jpg" alt="빨간 자석" />
+          </li>
+          <li class="carousel__item">
+            <img
+              src="./assets/images/resources/image-03.jpg"
+              alt="까만 아디다스 트레이닝복을 입고 디제잉하는 남자"
+            />
+            <img
+              src="./assets/images/resources/image-04.jpg"
+              alt="까만 턴테이블"
+            />
+          </li>
+          <li class="carousel__item">
+            <img
+              src="./assets/images/resources/image-05.jpg"
+              alt="초록 아디다스 트레이닝복을 입고 초록색 스프레이를 들고있는 남자"
+            />
+            <img
+              src="./assets/images/resources/image-06.jpg"
+              alt="초록 물감을 분사하고 있는 초록 스프레이"
+            />
+          </li>
+          <li class="carousel__item">
+            <img
+              src="./assets/images/resources/image-07.jpg"
+              alt="파란 아디다스 트레이닝복을 입고 머리카락을 흩날리는 여자"
+            />
+            <img
+              src="./assets/images/resources/image-08.jpg"
+              alt="바람을 일으키고 있는 파란 선풍기"
+            />
+          </li>
+        </ul>
+      </section>
+    </main>
   </body>
 </html>
