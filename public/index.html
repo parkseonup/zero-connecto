@@ -46,26 +46,35 @@
     />
     <!-- <link rel="stylesheet" href="assets/styles/app.css" /> -->
 
-    <!-- Tailwind CSS 기본(base) 스타일 모듈 확장 -->
-    <!-- MIME type -->
     <style type="text/tailwindcss">
-      @layer base {
-        [hidden] {
-          display: none !important;
+      @layer components {
+        .psu-button {
+          @apply flex justify-center items-center px-4 py-2 text-sm rounded;
+        }
+
+        .button-fill {
+          @apply text-white bg-psu-green-800
+        }
+        
+        .button-cancel {
+          @apply text-black bg-psu-green-100
+        }
+      }
+
+      @layer utilityis {
+        .my-underline {
+          padding-bottom: 0.2em;
+          border-bottom: 2px solid currentColor;
         }
       }
     </style>
 
     <script src="//cdn.tailwindcss.com"></script>
 
-    <!-- Tailwind CSS 구성(configuration) 테마 확장 (theme extend) -->
     <script>
       tailwind.config = {
         theme: {
           extend: {
-            spacing: {
-              13: '13px',
-            },
             colors: {
               'yamoo9-indigo': {
                 100: '#dbd1f7',
@@ -122,6 +131,28 @@
                 800: '#25500a',
                 900: '#122805',
               },
+              'hw-blue': {
+                100: '#d0d2f1',
+                200: '#a2a4e3',
+                300: '#7377d5',
+                400: '#4449c7',
+                500: '#161cb9',
+                600: '#111694',
+                700: '#0d116f',
+                800: '#090b4a',
+                900: '#040625',
+              },
+              'jaerin-blue': {
+                100: '#e8f4f8',
+                200: '#d1eaf1',
+                300: '#bbdfeb',
+                400: '#a4d4e4',
+                500: '#8dcadd',
+                600: '#71a1b1',
+                700: '#557985',
+                800: '#385158',
+                900: '#1c282c',
+              },
             },
           },
         },
@@ -130,38 +161,35 @@
   </head>
 
   <body>
-    <div class="flex items-center gap-2 m-4">
-      <div class="w-10 h-10 bg-psu-green-700"></div>
-      <div class="w-10 h-10 bg-psu-green-700"></div>
-    </div>
-
-    <div class="flex items-center gap-13 m-4">
-      <div class="w-10 h-10 bg-psu-green-900"></div>
-      <div class="w-10 h-10 bg-psu-green-900"></div>
-    </div>
-
-    <div hidden class="h-screen flex justify-center items-center">
+    <div class="app">
       <header lang="en">
-        <h1 class="text-5xl text-tailwind text-psu-green-500 font-bold">
+        <h1 class="logo">
           <a
-            class="external-link"
+            class="my-underline"
             href="//tailwindcss.com"
             target="_blank"
             rel="noopener noreferer"
           >
             <img
-              class="inline-block align-middle h-9"
+              class="h-8"
               src="assets/images/tailwindcss-mark.svg"
               alt=""
               height="24"
             />
             Tailwind
-            <abbr class="no-underline cursor-help" title="Cascading Style Sheet"
-              >CSS</abbr
-            >
+            <abbr title="Cascading Style Sheet">CSS</abbr>
           </a>
         </h1>
       </header>
+    </div>
+
+    <div class="flex gap-1">
+      <button type="button" class="psu-button button-fill">
+        확인
+      </button>
+      <button type="button" class="psu-button button-cancel">
+        취소
+      </button>
     </div>
   </body>
 </html>
