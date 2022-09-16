@@ -12,6 +12,28 @@
   }
 }
 
+@layer components {
+  .Card {
+    /* 모바일 */
+    @apply flex flex-col items-start lg:w-auto bg-psu-green-600 p-10 hover:shadow-xl hover:shadow-psu-green-900/20 transition duration-300 rounded-md;
+    /* xl */
+    @apply xl:bg-psu-green-800;
+  }
+
+  .psuButton {
+    /* normal */
+    @apply fixed top-4 right-4 px-4 py-2 text-sm bg-black rounded;
+    /* hover / focus */
+    @apply hover:bg-psu-green-800;
+    /* dark */
+    @apply dark:bg-white dark:text-black;
+  }
+
+  .Circle {
+    @apply w-8 h-8 rounded-full;
+  }
+}
+
 @layer utilities {
   .a11y-hidden {
     @apply overflow-hidden absolute w-px h-px -m-px p-0 border-0 whitespace-nowrap;

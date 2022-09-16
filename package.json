@@ -4,7 +4,7 @@
     "serve": "live-server public --host=localhost --port=8080 --no-browser",
     "compile": "tailwindcss --input src/tailwind.css --output public/assets/styles/main.css",
     "watch": "npm run compile -- --watch",
-    "build": "npm run compile -- --minify"
+    "build": "tailwindcss --input src/tailwind.css --output public/assets/styles/build.min.css --minify"
   },
   "devDependencies": {
     "live-server": "1.2.2",
